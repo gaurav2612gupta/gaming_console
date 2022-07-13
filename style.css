@@ -1,143 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Prompt', sans-serif;
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    min-height: 100vh;
-    background: #000;
-    overflow: hidden;
-}
-.glowing{
-    position: relative;
-    min-width: 750px;
-    height: 750px;
-    margin: -150px;
-    transform-origin: right;
-    animation: colorChange 5s linear infinite;
+    background: url(./images/bg.jpg) fixed center;
+    background-size: cover;
 }
 
-.glowing:nth-child(even){
-    transform-origin: left;
+
+.heading{
+    /* margin-top: -90%; */
+    /* position: fixed; */
+    /* background-color: aqua; */
+    width: 100%;
+    margin-top: 2%;
+    z-index: 30;
 }
 
-.glowing span{
-    position: absolute;
-    top: calc(80px * var(--i));
-    left: calc(80px * var(--i));
-    bottom: calc(80px * var(--i));
-    right: calc(80px * var(--i));
+.div{
+    margin: auto;
+    width: fit-content;
+}
+.ezgaming{
+    color: #c6e2ff;
+    animation: neon .08s ease-in-out infinite alternate;
+    font-size: 4rem;
+    font-family: 'Rubik Moonrocks', cursive;
 }
 
-.glowing span:before{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -8px;
-    width: 15px;
-    height: 15px;
-    background: #f00;
-    border-radius: 50%;
-}
-
-.glowing span:nth-child(3n+1):before{
-    background-color: rgba(134, 255, 0, 1);
-    box-shadow: 0 0 20px rgba(134, 255, 0, 1),
-                0 0 40px rgba(134, 255, 0, 1),
-                0 0 60px rgba(134, 255, 0, 1),
-                0 0 80px rgba(134, 255, 0, 1),
-                0 0 0 8px rgba(134, 255, 0, .1);
-}
-.glowing span:nth-child(3n+2):before{
-    background-color: rgba(255, 214, 0, 1);
-    box-shadow: 0 0 20px rgba(255, 214, 0, 1),
-                0 0 40px rgba(255, 214, 0, 1),
-                0 0 60px rgba(255, 214, 0, 1),
-                0 0 80px rgba(255, 214, 0, 1),
-                0 0 0 8px rgba(255, 214, 0, .1);
-}
-.glowing span:nth-child(3n+3):before{
-    background-color: rgba(0, 226, 255, 1);
-    box-shadow: 0 0 20px rgba(0, 226, 255, 1),
-                0 0 40px rgba(0, 226, 255, 1),
-                0 0 60px rgba(0, 226, 255, 1),
-                0 0 80px rgba(0, 226, 255, 1),
-                0 0 0 8px rgba(0, 226, 255, .1);
-}
-
-.glowing span:nth-child(3n+1){
-    animation: animate 10s alternate infinite;
-}
-.glowing span:nth-child(3n+2){
-    animation: animate-reverse 3s alternate infinite;
-}
-.glowing span:nth-child(3n+3){
-    animation: animate 8s alternate infinite;
-}
-
-@keyframes animate {
-
-
-    0%{
-        transform: rotate(0deg);
+@keyframes neon {
+    from {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.92),
+      0 0 30px rgba(202,228,225,0.34),
+      0 0 12px rgba(30,132,242,0.52),
+      0 0 21px rgba(30,132,242,0.92),
+      0 0 34px rgba(30,132,242,0.78),
+      0 0 54px rgba(30,132,242,0.92);
     }
-    100%{
-        transform: rotate(360deg);
+    to {
+      text-shadow:
+      0 0 6px rgba(202,228,225,0.98),
+      0 0 30px rgba(202,228,225,0.42),
+      0 0 12px rgba(30,132,242,0.58),
+      0 0 22px rgba(30,132,242,0.84),
+      0 0 38px rgba(30,132,242,0.88),
+      0 0 60px rgba(30,132,242,1);
     }
-
-}
-@keyframes animate-reverse {
-
-
-    0%{
-        transform: rotate(360deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-
-}
-@keyframes colorChange {
-
-
-    0%{
-        filter: hue-rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100%{
-        filter: hue-rotate(360deg);
-        transform: rotate(360deg);
-    }
-
-}
+  }
+  
+  
+  
 
 
 .cards{
     z-index: 10;
-    position: fixed;
     display: flex;
-    flex-direction: row;
-    margin-top: -350px;
+    flex-direction: column;
+    margin-top: 0%;
+    margin-bottom: 5%;
+
 }
-.cards-2{
-    z-index: 10;
-    position: fixed;
+.cards-row{
+    margin: auto;
     display: flex;
     flex-direction: row;
-    margin-top: 350px;
+    margin-top: 5%;
 }
 .card{
-    margin-left: 2rem;
-    height: 15rem;
+    margin-left: 4rem;
+    height: 35rem;
+    width: 25rem;
     color: white;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+
+.card:hover{
+    /* transform: scale(1.05); */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cardImg{
+    margin-top: 3% !important;
+    height: 45%;
+    width: 92%;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.cardBtn {
+    width: 92%;
+    height: 10%;
+    margin: auto;
+    margin-bottom: 3% !important;
+    border: 0px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.cardBtn a{
+    text-decoration: none;
+    color: white;
+}
+
+.cardBtn:hover{
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.cardHead{
+    font-size: 1.5rem;
+}
+
+.cardTxt{
+    font-size: 1rem;
+}
+
+.credit{
+    font-size: 1.1rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .cards-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .ezgaming{
+        font-size: 3.5rem;
+    }
+    .card{
+        margin: auto;
+        width: 90vw;
+        height: 60vh;
+        margin-top: 10vh;
+    }
+  }
