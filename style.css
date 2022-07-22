@@ -9,7 +9,7 @@
 
 body{
     width: 100%;
-    background: url(./images/bg.jpg) fixed center;
+    background: url(./images/bg1.jpg) fixed center;
     background-size: cover;
 }
 .top{
@@ -213,16 +213,3 @@ body{
     }
   }
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
->>>>>>> origin/main
