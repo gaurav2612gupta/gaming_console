@@ -12,15 +12,36 @@ body{
     background: url(./images/bg.jpg) fixed center;
     background-size: cover;
 }
+.top{
+    display: flex;
+    flex-direction: row;
+}
+
+.iconArea{
+    /* background-color: #c6e2ff; */
+    margin-right: 5%;
+    margin-top: 3.5%;
+}
+
+.icon{
+    text-decoration: none;
+
+}
+
+.chat{
+    /* background-color: aquamarine; */
+    width: auto;
+    height: fit-content;
+}
 
 
 .heading{
-    /* margin-top: -90%; */
-    /* position: fixed; */
-    /* background-color: aqua; */
+    display: absolute;
+    /* display : contents; */
     width: 100%;
-    margin-top: 2%;
-    z-index: 30;
+    padding-top: 3%;
+    padding-left: 10%;
+    margin:auto;
 }
 
 .div{
@@ -32,6 +53,12 @@ body{
     animation: neon .08s ease-in-out infinite alternate;
     font-size: 4rem;
     font-family: 'Rubik Moonrocks', cursive;
+}
+
+.iconText{
+    color: #c6e2ff;
+    font-size: 1.2rem;
+    margin-left: 2px;
 }
 
 @keyframes neon {
@@ -100,6 +127,10 @@ body{
 }
 
 .cardBtn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 92%;
     height: 10%;
     margin: auto;
@@ -121,6 +152,7 @@ body{
     transform: scale(1.02);
     background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
+    color:white;
 }
 .cardHead{
     font-size: 1.5rem;
@@ -146,7 +178,37 @@ body{
     .card{
         margin: auto;
         width: 90vw;
-        height: 60vh;
+        height: 70vh;
         margin-top: 10vh;
+    }
+    .top{
+        flex-direction: row;
+        /* background-color: blueviolet; */
+    }
+    .heading{
+        padding-left: 0%;
+        padding-top: 10%;
+        width: fit-content;
+        /* background-color: antiquewhite; */
+    }
+    .div{
+        margin: left;
+        /* background-color: aqua; */
+        margin-left: 1rem;
+    }
+    .icon{
+        transform: scale(0.6);
+        text-decoration: none;
+        margin-top: 80%;
+        /* background-color: aqua; */
+        /* padding-left: 55%; */
+    }
+    .iconArea{
+        width: fit-content;
+        margin-right: 0%;
+        /* background-color: aliceblue; */
+    }
+    .iconText{
+        display: none;
     }
   }
