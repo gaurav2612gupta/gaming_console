@@ -9,7 +9,7 @@
 
 body{
     width: 100%;
-    background: url(./images/bg1.jpg) fixed center;
+    background: url(./images/bg.jpg) fixed center;
     background-size: cover;
 }
 .top{
@@ -17,19 +17,30 @@ body{
     flex-direction: row;
 }
 
-.chat i{
-    /* display: relative; */
-    font-size: 40px;
-    margin: 40px 80px;
-    z-index: 100;
+.iconArea{
+    /* background-color: #c6e2ff; */
+    margin-right: 5%;
+    margin-top: 3.5%;
 }
+
+.icon{
+    text-decoration: none;
+
+}
+
+.chat{
+    /* background-color: aquamarine; */
+    width: auto;
+    height: fit-content;
+}
+
 
 .heading{
     display: absolute;
     /* display : contents; */
     width: 100%;
     padding-top: 3%;
-    padding-left: 28%;
+    padding-left: 10%;
     margin:auto;
 }
 
@@ -42,6 +53,12 @@ body{
     animation: neon .08s ease-in-out infinite alternate;
     font-size: 4rem;
     font-family: 'Rubik Moonrocks', cursive;
+}
+
+.iconText{
+    color: #c6e2ff;
+    font-size: 1.2rem;
+    margin-left: 2px;
 }
 
 @keyframes neon {
@@ -165,17 +182,44 @@ body{
         margin-top: 10vh;
     }
     .top{
-        flex-direction: column;
+        flex-direction: row;
+        /* background-color: blueviolet; */
     }
     .heading{
-        padding-left: 12%;
+        padding-left: 0%;
         padding-top: 10%;
+        width: fit-content;
+        /* background-color: antiquewhite; */
     }
     .div{
-        margin-left: 2rem;
+        margin: left;
+        /* background-color: aqua; */
+        margin-left: 1rem;
     }
-    .chat i{
-        font-size: 25px;
-        padding-left: 55%;
+    .icon{
+        transform: scale(0.6);
+        text-decoration: none;
+        margin-top: 80%;
+        /* background-color: aqua; */
+        /* padding-left: 55%; */
+    }
+    .iconArea{
+        width: fit-content;
+        margin-right: 0%;
+        /* background-color: aliceblue; */
+    }
+    .iconText{
+        display: none;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
